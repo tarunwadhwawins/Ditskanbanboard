@@ -1,0 +1,85 @@
+@import "../../../../assets/scss/variables.scss";
+
+
+    .leftSection {
+        display: flex;
+        flex-basis: 100%;
+        .logo {
+            padding: 8px 6px;
+            // background: #ffffff26;
+            border-radius: 4px;
+            color: $white-color;
+            font-family: $primary-font-family-bold;
+            font-size: 16px;
+        }
+        .headerBtns {
+            margin: 0 4px;
+            padding: 8px 6px;
+            display: flex;
+            align-items: center;
+            .menus {
+                margin: 0 15px 0 0;
+                a {
+                    color: $white-color;
+                    padding: 6px 12px;
+                    font-size: 15px;
+                }
+            }
+            .create {
+                a {
+                    color: $white-color;
+                    padding: 6px 12px;
+                    font-size: 15px;
+                    background: #ffffff26;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+    .rightSection {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+        .search {
+            margin: 0 4px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .ant-input-affix-wrapper {
+                width: 250px;
+                input {
+                    &::placeholder {
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .notifications {
+            margin: 0 4px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                padding: 6px 10px;
+                color: $white-color;
+                font-size: 15px;
+            }
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                padding: 6px 10px;
+                color: $white-color;
+                font-size: 15px;
+                background: $secondary-color;
+                border-radius: 50%;
+                height: 35px;
+                width: 35px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+        }
+    }
