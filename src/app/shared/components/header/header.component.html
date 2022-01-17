@@ -7,10 +7,29 @@
                 <i nz-icon nzType="down"></i>
             </a>
             <nz-dropdown-menu #menu="nzDropdownMenu">
-                <ul nz-menu>
+                <ul nz-menu class="w-300">
                     <div class="card">
                         <div class="cardHeader"> Workspaces</div>
                         <div class="cardContent">
+                            <nz-list nzItemLayout="horizontal" class="workspace">
+                                <nz-list-item>
+                                    <nz-list-item-meta>
+                                        <nz-list-item-meta-avatar><span class="one">R</span></nz-list-item-meta-avatar>
+                                        <nz-list-item-meta-title>
+                                            React Styled Components
+                                        </nz-list-item-meta-title>
+
+                                    </nz-list-item-meta>
+                                </nz-list-item>
+                                <nz-list-item>
+                                    <nz-list-item-meta>
+                                        <nz-list-item-meta-avatar><span class="two">D</span></nz-list-item-meta-avatar>
+                                        <nz-list-item-meta-title>
+                                            Design Work
+                                        </nz-list-item-meta-title>
+                                    </nz-list-item-meta>
+                                </nz-list-item>
+                            </nz-list>
                         </div>
                     </div>
                 </ul>
@@ -20,10 +39,36 @@
                 <i nz-icon nzType="down"></i>
             </a>
             <nz-dropdown-menu #menu1="nzDropdownMenu">
-                <ul nz-menu>
+                <ul nz-menu class="w-300">
                     <div class="card">
                         <div class="cardHeader"> Recent</div>
                         <div class="cardContent">
+                            <nz-list nzItemLayout="horizontal" class="recent">
+                                <nz-list-item>
+                                    <nz-list-item-meta>
+                                        <nz-list-item-meta-avatar nzSrc="../../../../assets/images/img-1.jpg">
+                                        </nz-list-item-meta-avatar>
+                                        <nz-list-item-meta-title>
+                                            React Styled Components
+                                        </nz-list-item-meta-title>
+                                        <nz-list-item-meta-description>
+                                            Pawan's Workspaces
+                                        </nz-list-item-meta-description>
+                                    </nz-list-item-meta>
+                                </nz-list-item>
+                                <nz-list-item>
+                                    <nz-list-item-meta>
+                                        <nz-list-item-meta-avatar nzSrc="../../../../assets/images/img-2.jpg">
+                                        </nz-list-item-meta-avatar>
+                                        <nz-list-item-meta-title>
+                                            Design Project
+                                        </nz-list-item-meta-title>
+                                        <nz-list-item-meta-description>
+                                            Tarun's Workspaces
+                                        </nz-list-item-meta-description>
+                                    </nz-list-item-meta>
+                                </nz-list-item>
+                            </nz-list>
                         </div>
                     </div>
                 </ul>
@@ -60,17 +105,37 @@
             <i nz-icon nzType="notification" nzTheme="outline"></i>
         </a>
         <nz-dropdown-menu #notifications="nzDropdownMenu">
-            <ul nz-menu>
+            <ul nz-menu class="w-350">
                 <div class="card">
                     <div class="cardHeader"> Notifications</div>
                     <div class="cardContent">
+                        <nz-list nzItemLayout="horizontal" class="workspace notifications">
+                            <nz-list-item>
+                                <nz-list-item-meta>
+                                    <nz-list-item-meta-avatar><span class="one">HP</span></nz-list-item-meta-avatar>
+                                    <nz-list-item-meta-title>
+                                        Home Page Design
+                                    </nz-list-item-meta-title>
+                                    <nz-list-item-meta-description>
+                                        Tarun Wadhwa
+                                        <nz-timeline>
+                                            <nz-timeline-item>Moved to list to do. <p>Jan 15 at 12:00 PM</p></nz-timeline-item>
+                                            <nz-timeline-item>Solve initial network problems <p>Jan 15 at 12:00 PM</p></nz-timeline-item>
+                                            <nz-timeline-item>Technical testing <p>Jan 15 at 12:00 PM</p></nz-timeline-item>
+                                            <nz-timeline-item>Network problems being solved <p>Jan 15 at 12:00 PM</p></nz-timeline-item>
+                                          </nz-timeline>
+                                    </nz-list-item-meta-description>
+
+                                </nz-list-item-meta>
+                            </nz-list-item>
+                        </nz-list>
                     </div>
                 </div>
             </ul>
         </nz-dropdown-menu>
     </div>
     <div class="profile">
-        <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="account" >
+        <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="account">
             TW
         </a>
         <nz-dropdown-menu #account="nzDropdownMenu">
@@ -78,18 +143,18 @@
                 <div class="card">
                     <div class="cardHeader"> Account</div>
                     <div class="cardContent">
-                       <div class="accountDetails">
-                           <div class="icon">TW</div>
-                           <div class="iconDetails">
-                               <div class="name">Tarun Wadhwa</div>
-                               <div class="email">tarunwadhwawins@gmail.com</div>
-                           </div>
-                       </div> 
-                       <li nz-menu-divider></li>
-                       <li nz-menu-item>Profile</li>
-                       <li nz-menu-item>Settings</li>
-                       <li nz-menu-divider></li>
-                       <li nz-menu-item>Log Out</li>
+                        <div class="accountDetails">
+                            <div class="icon">TW</div>
+                            <div class="iconDetails">
+                                <div class="name">Tarun Wadhwa</div>
+                                <div class="email">tarunwadhwawins@gmail.com</div>
+                            </div>
+                        </div>
+                        <li nz-menu-divider></li>
+                        <li nz-menu-item>Profile</li>
+                        <li nz-menu-item>Settings</li>
+                        <li nz-menu-divider></li>
+                        <li nz-menu-item>Log Out</li>
                     </div>
                 </div>
             </ul>
