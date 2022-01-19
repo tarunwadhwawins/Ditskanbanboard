@@ -8,6 +8,9 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzTimelineModule } from 'ng-zorro-antd/timeline';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
+
 
 
 
@@ -21,7 +24,8 @@ import { NzTimelineModule } from 'ng-zorro-antd/timeline';
     NzInputModule,
     NzListModule,
     NzAvatarModule,
-    NzTimelineModule
+    NzTimelineModule,
+    NzButtonModule
   ],
   exports: [
     NzDropDownModule,
@@ -29,7 +33,8 @@ import { NzTimelineModule } from 'ng-zorro-antd/timeline';
     NzInputModule,
     NzListModule,
     NzAvatarModule,
-    NzTimelineModule
+    NzTimelineModule,
+    NzButtonModule
   ]
 })
 export class UiComponentModule { }

@@ -1,7 +1,29 @@
 <div class="content">
     <div class="boardWrapper">
         <div class="boardMainContent">
-            <div class="boardHeader">ssss</div>
+            <div class="boardHeader">
+                <h3>React Semantic UI</h3>
+                <nz-avatar-group>
+                    <nz-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png">
+                    </nz-avatar>
+                    <nz-avatar style="background-color: #f56a00" nzText="U"></nz-avatar>
+                    <nz-avatar style="background-color: #fde3cf; color: #f56a00" nzText="+2"></nz-avatar>
+                </nz-avatar-group>
+
+                <a nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomLeft"><i nz-icon
+                        nzType="user-add" nzTheme="outline"></i>Invite</a>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu class="inviteDropDown w-300">
+                        <div class="card">
+                            <div class="cardHeader"> Invite to board</div>
+                            <div class="cardContent">
+                                <input nz-input placeholder="Email Address" />
+                                <button nz-button nzType="primary" nzBlock>Send Invite</button>
+                            </div>
+                        </div>
+                    </ul>
+                </nz-dropdown-menu>
+            </div>
             <div class="boardCanvas">
                 <div class="boardScroll">
                     <div class="listWrapper">

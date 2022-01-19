@@ -1,3 +1,4 @@
+@import "../../../../assets/scss/variables.scss";
 .content {
     outline: none;
     overflow-y: auto;
@@ -18,8 +19,31 @@
             transition: margin 0.1s ease-in;
             .boardHeader {
                 height: auto;
-                padding: 8px 4px 4px 8px;
+                padding: 10px 4px 10px 8px;
                 position: relative;
+                background-color: rgba(255, 255, 255, 0.6);
+                margin: 0 0 20px;
+                display: flex;
+                align-items: center;
+                h3 {
+                    font-size: 20px;
+                    font-family: $secondary-font-family-semibold;
+                    margin: 0;
+                }
+                .ant-avatar-group {
+                    padding: 0 0 0 40px;
+                }
+                .ant-dropdown-trigger {
+                    margin: 0 0 0 10px;
+                    background-color: $primary-color;
+                    border: none;
+                    color: $white-color;
+                    border-radius: 5px;
+                    padding: 5px 15px;
+                    .anticon {
+                        margin: 0 5px 0 0;
+                    }
+                }
             }
             .boardCanvas {
                 flex-grow: 1;
@@ -149,6 +173,15 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+.inviteDropDown {
+    .card {
+        .cardContent {
+            .ant-btn {
+                margin: 20px 0 0;
             }
         }
     }
