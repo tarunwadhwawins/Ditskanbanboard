@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeatureModule } from './feature/feature.module';
 import { SharedModule } from './shared/shared.module';
 import { UiComponentModule } from './ui-component/ui-component.module';
-
+// import { DragDropModule } from '@angular/cdk/drag-drop';
 registerLocaleData(en);
 
 @NgModule({
@@ -28,7 +28,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     FeatureModule,
     SharedModule,
-    UiComponentModule
+    UiComponentModule,
+    // DragDropModule
   ],
   exports: [
     BrowserModule,

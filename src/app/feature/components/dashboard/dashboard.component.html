@@ -26,33 +26,34 @@
             </div>
             <div class="boardCanvas">
                 <div class="boardScroll">
-                    <div class="listWrapper">
-                        <div class="list">
-                            <div class="listHeader">
-                                <h2>BackLog</h2>
+                    <div class="listWrapper" *ngFor="let track of mainTrackArr; let i=index">
+                        <div class="list" >
+                            <div class="listHeader" cdkDragHandle>
+                                <h2>{{track.title}}</h2>
                             </div>
-                            <div class="listCards">
-                                <a class="listCardInner">
+                            <div class="listCards" cdkDropList [id]="track.id" [cdkDropListData]="track.tasks" [cdkDropListConnectedTo]="trackIds"
+                            (cdkDropListDropped)="onTaskDrop($event)">
+                                <a class="listCardInner" *ngFor="let task of track.tasks" cdkDrag>
                                     <div class="listCardDetails">
                                         <div class="listCardTitle">
                                             Design
                                         </div>
                                     </div>
                                 </a>
-                                <a class="listCardInner">
+                                <!-- <a class="listCardInner" cdkDrag>
                                     <div class="listCardDetails">
                                         <div class="listCardTitle">
                                             Development
                                         </div>
                                     </div>
                                 </a>
-                                <a class="listCardInner">
+                                <a class="listCardInner" cdkDrag>
                                     <div class="listCardDetails">
                                         <div class="listCardTitle">
                                             Testing
                                         </div>
                                     </div>
-                                </a>
+                                </a> -->
                             </div>
                             <div class="listCardComposer">
                                 <a href="#" class="openCardComposer">
@@ -62,7 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="listWrapper">
+                    <!-- <div class="listWrapper">
                         <div class="list">
                             <div class="listHeader">
                                 <h2>To Do</h2>
@@ -105,7 +106,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="listWrapper modAdd">
                         <a class="openAddList" href="#">
                             <span class="placeholder">

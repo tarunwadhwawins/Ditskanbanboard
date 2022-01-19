@@ -10,9 +10,7 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzTimelineModule } from 'ng-zorro-antd/timeline';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 
-
-
-
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -25,7 +23,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     NzListModule,
     NzAvatarModule,
     NzTimelineModule,
-    NzButtonModule
+    NzButtonModule,
+    MatCardModule
   ],
   exports: [
     NzDropDownModule,
@@ -34,7 +33,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     NzListModule,
     NzAvatarModule,
     NzTimelineModule,
-    NzButtonModule
+    NzButtonModule,
+    MatCardModule
   ]
 })
 export class UiComponentModule { }

@@ -3,3 +3,6 @@
 @import "~ng-zorro-antd/button/style/index.min.css";  /* Import one component's styles */
 @import "/src/assets/scss/common.scss";
 @import "/src/assets/scss/style.scss";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
