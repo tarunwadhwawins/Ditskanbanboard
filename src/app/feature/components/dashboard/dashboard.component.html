@@ -26,44 +26,110 @@
             </div>
             <div class="boardCanvas">
                 <div class="boardScroll">
-                    <div class="listWrapper" *ngFor="let track of mainTrackArr; let i=index">
-                        <div class="list" >
-                            <div class="listHeader" cdkDragHandle>
-                                <h2>{{track.title}}</h2>
-                            </div>
-                            <div class="listCards" cdkDropList [id]="track.id" [cdkDropListData]="track.tasks" [cdkDropListConnectedTo]="trackIds"
-                            (cdkDropListDropped)="onTaskDrop($event)">
-                                <a class="listCardInner" *ngFor="let task of track.tasks" cdkDrag>
-                                    <div class="listCardDetails">
-                                        <div class="listCardTitle">
-                                            Design
-                                        </div>
+                    <div cdkDropListGroup>
+
+                        <div class="listWrapper">
+                            <div class="list">
+                                <div class="listHeader" cdkDragHandle>
+                                    <h2>To do</h2>
+                                </div>
+                                <div class="listCards">
+
+                                    <div cdkDropList [cdkDropListData]="todo" class="example-list"
+                                        (cdkDropListDropped)="drop($event)">
+                                        <div class="example-box" *ngFor="let item of todo" cdkDrag> <a
+                                                class="listCardInner">
+                                                <div class="listCardDetails">
+                                                    <div class="listCardTitle">
+                                                        {{item}}
+                                                    </div>
+                                                </div>
+                                            </a></div>
                                     </div>
-                                </a>
-                                <!-- <a class="listCardInner" cdkDrag>
-                                    <div class="listCardDetails">
-                                        <div class="listCardTitle">
-                                            Development
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="listCardInner" cdkDrag>
-                                    <div class="listCardDetails">
-                                        <div class="listCardTitle">
-                                            Testing
-                                        </div>
-                                    </div>
-                                </a> -->
-                            </div>
-                            <div class="listCardComposer">
-                                <a href="#" class="openCardComposer">
-                                    <i nz-icon nzType="plus" nzTheme="outline" class="iconAdd"></i>
-                                    <span>Add a card</span>
-                                </a>
+
+                                </div>
+                                <div class="listCardComposer">
+                                    <a href="#" class="openCardComposer">
+                                        <i nz-icon nzType="plus" nzTheme="outline" class="iconAdd"></i>
+                                        <span>Add a card</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- <div class="listWrapper">
+
+
+                        <div class="listWrapper">
+                            <div class="list">
+                                <div class="listHeader" cdkDragHandle>
+                                    <h2>Doing</h2>
+                                </div>
+                                <div class="listCards">
+                                    <div cdkDropList [cdkDropListData]="doing" class="example-list"
+                                        (cdkDropListDropped)="drop($event)">
+                                        <div class="example-box" *ngFor="let item of doing" cdkDrag> <a
+                                                class="listCardInner">
+                                                <div class="listCardDetails">
+                                                    <div class="listCardTitle">
+                                                        {{item}}
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                    </div>
+
+                                </div>
+                                <div class="listCardComposer">
+                                    <a href="#" class="openCardComposer">
+                                        <i nz-icon nzType="plus" nzTheme="outline" class="iconAdd"></i>
+                                        <span>Add a card</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listWrapper">
+                            <div class="list">
+                                <div class="listHeader" cdkDragHandle>
+                                    <h2>Done</h2>
+                                </div>
+                                <div class="listCards">
+                                    <div cdkDropList [cdkDropListData]="done" class="example-list"
+                                        (cdkDropListDropped)="drop($event)">
+                                        <div class="example-box" *ngFor="let item of done" cdkDrag> <a
+                                                class="listCardInner">
+                                                <div class="listCardDetails">
+                                                    <div class="listCardTitle">
+                                                        {{item}}
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                    </div>
+
+                                </div>
+                                <div class="listCardComposer">
+                                    <a href="#" class="openCardComposer">
+                                        <i nz-icon nzType="plus" nzTheme="outline" class="iconAdd"></i>
+                                        <span>Add a card</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="listWrapper" *ngFor="let track of mainTrackArr; let i=index">
+                            <div class="list">
+                                <div class="listHeader" cdkDragHandle>
+                                    <h2>{{track.title}}</h2>
+                                </div>
+                                <div class="listCards" cdkDropList [id]="track.id" [cdkDropListData]="track.tasks"
+                                    [cdkDropListConnectedTo]="trackIds" (cdkDropListDropped)="onTaskDrop($event)">
+                                </div>
+                                <div class="listCardComposer">
+                                    <a href="#" class="openCardComposer">
+                                        <i nz-icon nzType="plus" nzTheme="outline" class="iconAdd"></i>
+                                        <span>Add a card</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="listWrapper">
                         <div class="list">
                             <div class="listHeader">
                                 <h2>To Do</h2>
@@ -107,12 +173,13 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="listWrapper modAdd">
-                        <a class="openAddList" href="#">
-                            <span class="placeholder">
-                                <i nz-icon nzType="plus" nzTheme="outline" class="iconAdd"></i> Add another list
-                            </span>
-                        </a>
+                        <div class="listWrapper modAdd">
+                            <a class="openAddList" href="#">
+                                <span class="placeholder">
+                                    <i nz-icon nzType="plus" nzTheme="outline" class="iconAdd"></i> Add another list
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
